@@ -1,3 +1,4 @@
+/* Global */
 html {
   background: url("../images/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -11,7 +12,11 @@ html {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: initial;
+}
 
+/* Mobile first */
 .header .main {
   width: 90vw;
   margin: 0 auto;
@@ -70,6 +75,7 @@ form {
   color: white;
 }
 
+/* Latest News */
 .latest__news__article {
   background-color: #fff;
   text-align: start;
@@ -80,7 +86,7 @@ form {
 .latest__news__article__headline {
   margin: 0;
 }
-
+/* Images with icons on hover */
 .pic__container {
   position: relative;
   opacity: 0.7;
@@ -95,14 +101,31 @@ form {
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
-i {
+.pic__icons__container i {
   font-size: 2.5rem;
   margin-left: 1rem;
-  color: white;
+  color: black;
+  background-color: white;
 }
 .pic__container:hover,
 .pic__container:hover > * {
   opacity: 1;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+}
+
+/* Name, comments, date for articles */
+
+.name__comments__date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.name__comments__date p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.name__comments__date i {
+  margin-right: 0.3rem;
 }
