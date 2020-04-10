@@ -37,27 +37,36 @@
       </nav>
     </header>
     <main class="main">
-      <section class="carousel">
-        <ul>
-          <a class="left" href="#">&#8592;</a>
-          <li class="slide slide1">
-            <img src="https://picsum.photos/200" />
-            <p>ALL DAY BLUES</p>
+      <section class="slideshow__section__container">
+        <ul class="slideshow__container">
+          <li class="mySlides1 fade">
+            <p class="artist__name">All Day Blues</p>
+            <img alt="artist" src="https://picsum.photos/300/200" />
           </li>
-          <li class="slide slide2">
-            <img src="https://picsum.photos/200" />
-            <p>Eric Clapton</p>
+
+          <li class="mySlides2 fade">
+            <p class="artist__name">Eric Clapton</p>
+            <img alt="artist" src="https://picsum.photos/300/200" />
           </li>
-          <li class="slide slide3">
-            <img src="https://picsum.photos/200" />
-            <p>Amazing Blues</p>
+
+          <li class="mySlides fade">
+            <p class="artist__name">Amazing Blues</p>
+            <img alt="artist" src="https://picsum.photos/300/200" />
           </li>
-          <li class="slide slide4">
-            <img src="https://picsum.photos/200" />
-            <p>B.B.King</p>
+          <li class="mySlides3 fade">
+            <p class="artist__name">B.B.King</p>
+            <img alt="artist" src="https://picsum.photos/300/200" />
           </li>
-          <a class="right" href="#">&#8594;</a>
         </ul>
+
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+        <div class="pagination">
+          <a class="number">1</a>
+          <a class="number">2</a>
+          <a class="number">3</a>
+          <a class="number">4</a>
+        </div>
       </section>
       <div>
         <section class="latest__news">
@@ -519,9 +528,15 @@
       </div>
       <div>
         <p>00:00</p>
-        <div>
-          <span class="sticky__player__volume"></span>
-          <input type="range" id="volume" name="volume" min="0" max="100" />
+        <div class="volume__control__container">
+          <i class="fas fa-volume-up"></i>
+          <input
+            type="range"
+            class="volume__slider"
+            name="volume"
+            min="0"
+            max="100"
+          />
         </div>
       </div>
       <span class="sticky__player__visible"></span>
