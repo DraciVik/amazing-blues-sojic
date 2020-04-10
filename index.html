@@ -197,7 +197,7 @@
         </section>
         <section class="artists">
           <h2>ARTISTS</h2>
-          <figure>
+          <figure class="artist__container">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -208,10 +208,10 @@
             </div>
             <figcaption>
               <p>Lazer Lloyd's music makes</p>
-              <p>Blues</p>
+              <p class="artist__genre">Blues</p>
             </figcaption>
           </figure>
-          <figure>
+          <figure class="artist__container">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -222,10 +222,10 @@
             </div>
             <figcaption>
               <p>John Ingrassia</p>
-              <p>Blues</p>
+              <p class="artist__genre">Blues</p>
             </figcaption>
           </figure>
-          <figure>
+          <figure class="artist__container">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -236,7 +236,7 @@
             </div>
             <figcaption>
               <p>George "Buddy" Guy</p>
-              <p>Blues</p>
+              <p class="artist__genre">Blues</p>
             </figcaption>
           </figure>
         </section>
@@ -264,10 +264,10 @@
               </p>
             </div>
             <article class="name__date">
-              <p class="name"><span class="icon"></span>Milena Staniskovska</p>
+              <p class="name"><i class="fas fa-user"></i>Milena Staniskovska</p>
               <p class="date">
                 <time datetime="2017-02-04"
-                  ><span class="icon"></span>February 4th, 2017</time
+                  ><i class="fas fa-comment-alt"></i>February 4th, 2017</time
                 >
               </p>
             </article>
@@ -293,10 +293,10 @@
               </p>
             </div>
             <article class="name__date">
-              <p class="name"><span class="icon"></span>Milena Staniskovska</p>
+              <p class="name"><i class="fa fa-user"></i>Milena Staniskovska</p>
               <p class="date">
                 <time datetime="2017-01-11"
-                  ><span class="icon"></span>January 11th, 2017</time
+                  ><i class="fas fa-comment-alt"></i>January 11th, 2017</time
                 >
               </p>
             </article>
@@ -305,8 +305,9 @@
         <section class="blues__events">
           <h2>BLUES EVENTS</h2>
         </section>
-        <section class="latest__photo">
-          <figure>
+        <section class="latest__photo__container">
+          <h2>LATEST PHOTO</h2>
+          <figure class="latest__photo__figure">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -319,7 +320,7 @@
               <p>Howlin Wolf</p>
             </figcaption>
           </figure>
-          <figure>
+          <figure class="latest__photo__figure">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -332,7 +333,7 @@
               <p>Stevie Ray Vaughan</p>
             </figcaption>
           </figure>
-          <figure>
+          <figure class="latest__photo__figure">
             <div class="pic__container">
               <img src="https://picsum.photos/300/200" alt="artist" />
               <div class="pic__icons__container">
@@ -351,82 +352,79 @@
         <h2>LISTEN NOW</h2>
         <section class="listen__now">
           <a href="#" target="_blank" rel="noreferrer noopener"
-            ><img src="https://source.unsplash.com/random/20x20"
+            ><img src="https://source.unsplash.com/random/30x30"
           /></a>
           <a href="#" target="_blank" rel="noreferrer noopener"
-            ><img src="https://source.unsplash.com/random/20x20"
+            ><img src="https://source.unsplash.com/random/30x30"
           /></a>
           <a href="#" target="_blank" rel="noreferrer noopener"
-            ><img src="https://source.unsplash.com/random/20x20"
+            ><img src="https://source.unsplash.com/random/30x30"
           /></a>
           <a href="#" target="_blank" rel="noreferrer noopener"
-            ><img src="https://source.unsplash.com/random/20x20"
+            ><img src="https://source.unsplash.com/random/30x30"
+          /></a>
+          <a href="#" target="_blank" rel="noreferrer noopener"
+            ><img src="https://source.unsplash.com/random/30x30"
+          /></a>
+          <a href="#" target="_blank" rel="noreferrer noopener"
+            ><img src="https://source.unsplash.com/random/30x30"
           /></a>
         </section>
-        <section class="followers">
-          <div>
-            <img src="https://source.unsplash.com/random/20x20" alt="logo" />
-            <p><a href="#">Amazing Blues</a></p>
+        <section class="followers__container">
+          <div class="followers">
+            <header class="followers__heading">
+              <a href="#"
+                ><img src="images/logo.png" alt="logo" class="logo"
+              /></a>
+              <p><a href="#">Amazing Blues</a></p>
+            </header>
+            <p class="num__followers">5 followers</p>
+            <div class="followers__avatars">
+              <div class="tooltip">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><img src="https://source.unsplash.com/random/50x50"
+                /></a>
+                <span class="tooltip__text">Ekaterina</span>
+              </div>
+              <div class="tooltip">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><img src="https://source.unsplash.com/random/50x50"
+                /></a>
+                <span class="tooltip__text">Viktoriya</span>
+              </div>
+              <div class="tooltip">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><img src="https://source.unsplash.com/random/50x50"
+                /></a>
+                <span class="tooltip__text">Dalibor</span>
+              </div>
+              <div class="tooltip">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><img src="https://source.unsplash.com/random/50x50"
+                /></a>
+                <span class="tooltip__text">Anastasia</span>
+              </div>
+              <div class="tooltip">
+                <a href="#" target="_blank" rel="noreferrer noopener"
+                  ><img src="https://source.unsplash.com/random/50x50"
+                /></a>
+                <span class="tooltip__text">Tamas</span>
+              </div>
+            </div>
           </div>
-          <hr />
-          <p>5 followers</p>
-          <div>
-            <div class="tooltip">
-              <a href="#" target="_blank" rel="noreferrer noopener"
-                ><img src="https://source.unsplash.com/random/20x20"
-              /></a>
-              <span class="tooltip__text">Ekaterina</span>
-            </div>
-            <div class="tooltip">
-              <a href="#" target="_blank" rel="noreferrer noopener"
-                ><img src="https://source.unsplash.com/random/20x20"
-              /></a>
-              <span class="tooltip__text">Viktoriya</span>
-            </div>
-            <div class="tooltip">
-              <a href="#" target="_blank" rel="noreferrer noopener"
-                ><img src="https://source.unsplash.com/random/20x20"
-              /></a>
-              <span class="tooltip__text">Dalibor</span>
-            </div>
-            <div class="tooltip">
-              <a href="#" target="_blank" rel="noreferrer noopener"
-                ><img src="https://source.unsplash.com/random/20x20"
-              /></a>
-              <span class="tooltip__text">Anastasia</span>
-            </div>
-            <div class="tooltip">
-              <a href="#" target="_blank" rel="noreferrer noopener"
-                ><img src="https://source.unsplash.com/random/20x20"
-              /></a>
-              <span class="tooltip__text">Tamas</span>
-            </div>
-          </div>
-          <button type="button">
-            <span class="logo__vk"></span>Follow on VK
+          <button
+            class="followers__button followers__button--blue"
+            type="button"
+          >
+            <i class="fab fa-vk"></i>Follow on VK
           </button>
         </section>
       </aside>
     </main>
-    <section class="sticky__player">
+
+    <section class="about__friends__latest">
       <div>
-        <span class="sticky__player__refresh"></span>
-        <span class="sticky__player__play"></span>
-        <span class="sticky__player__stop"></span>
-        <p>Amazing Blues</p>
-      </div>
-      <div>
-        <p>00:00</p>
-        <div>
-          <span class="sticky__player__volume"></span>
-          <input type="range" id="volume" name="volume" min="0" max="100" />
-        </div>
-      </div>
-      <span class="sticky__player__visible"></span>
-    </section>
-    <footer>
-      <div>
-        <section>
+        <section class="about">
           <h3>ABOUT <strong>AMAZING BLUES</strong></h3>
           <p>
             <strong>Amazing Blues</strong> (part of the
@@ -442,7 +440,7 @@
           </p>
         </section>
         <div>
-          <section>
+          <section class="friends">
             <h3>OUR <strong>FRIENDS</strong></h3>
             <ul>
               <li>
@@ -500,14 +498,33 @@
               </li>
             </ul>
           </section>
-          <section>
+          <section class="latest__played">
             <h3>LATEST <strong>PLAYED TRACKS</strong></h3>
           </section>
         </div>
       </div>
-      <section>
-        <p>&copy;2020 Amazing Blues » Internet Radio. All Rights Reserved.</p>
-      </section>
+    </section>
+    <footer class="copyright">
+      <p>&copy;2020 Amazing Blues » Internet Radio. All Rights Reserved.</p>
     </footer>
+    <section class="sticky__player">
+      <div class="refresh__play__pause">
+        <div>
+          <i class="fas fa-sync"></i>
+          <i class="fas fa-play"></i>
+          <i class="fas fa-stop"></i>
+        </div>
+
+        <p>Amazing Blues</p>
+      </div>
+      <div>
+        <p>00:00</p>
+        <div>
+          <span class="sticky__player__volume"></span>
+          <input type="range" id="volume" name="volume" min="0" max="100" />
+        </div>
+      </div>
+      <span class="sticky__player__visible"></span>
+    </section>
   </body>
 </html>
