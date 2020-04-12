@@ -8,6 +8,7 @@ html {
   margin: 0;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
 }
 body {
   padding: 0;
@@ -21,12 +22,17 @@ a:visited {
 }
 h2 {
   text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 /* Mobile first */
 .header .main {
   width: 90vw;
   margin: 0 auto;
+}
+.album__review__article h2 {
+  margin: 0;
 }
 /* Basic header styles */
 .header {
@@ -40,6 +46,10 @@ h2 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.logo {
+  max-width: 200px;
+}
+
 /* Navigation */
 
 .nav__list {
@@ -124,6 +134,10 @@ form {
   user-select: none;
 }
 
+figure {
+  border-bottom: 2px solid gray;
+  line-height: 1rem;
+}
 /* Position the "next button" to the right */
 .next {
   right: 10px;
@@ -147,7 +161,7 @@ form {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* Artist name */
 .artist__name {
   margin-top: 0;
   color: #f2f2f2;
@@ -159,7 +173,7 @@ form {
   background-color: rgb(5, 5, 131);
 }
 
-/* The dots/bullets/indicators */
+/*number indicators */
 .pagination {
   position: absolute;
   right: 15px;
@@ -208,6 +222,7 @@ form {
   font-size: 18px;
 }
 .pic__icons__container i {
+  border: 1px solid black;
   font-size: 2.5rem;
   margin-left: 1rem;
   color: black;
@@ -248,6 +263,7 @@ form {
   background-color: white;
   color: black;
 }
+
 .artist__container figcaption,
 .latest__photo__figure figcaption {
   padding-left: 10px;
@@ -275,11 +291,13 @@ form {
 
 .listen__now {
   display: flex;
-  justify-content: center;
+  place-content: center;
   background-color: white;
 }
 .listen__now a {
+  display: inline-block;
   margin-left: 10px;
+  height: 30px;
 }
 
 /* Followers */
@@ -305,7 +323,7 @@ form {
   color: blue;
 }
 
-.logo {
+.followers__logo {
   width: 50px;
   border-radius: 50%;
   margin-right: 10px;
@@ -330,6 +348,8 @@ form {
   margin-bottom: 10px;
   background-color: #6586ab;
   color: white;
+  border-radius: 5px;
+  border: none;
 }
 .followers__button:hover {
   background-color: #7599c2;
@@ -472,7 +492,344 @@ form {
   background-color: black;
   height: 50px;
   border-top: 2px solid blue;
+  margin: 0;
 }
 .copyright p {
   margin: 0;
+}
+
+/* Medium screens */
+
+@media screen and (min-width: 700px) {
+  .logo {
+    width: 100%;
+  }
+
+  /* Nav  */
+
+  .nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  form {
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  /* Slideshow */
+  .slideshow__section__container {
+    padding: 30px;
+  }
+
+  .slideshow__container img {
+    height: 300px;
+  }
+
+  .pagination {
+    bottom: 40px;
+    right: 40px;
+  }
+
+  .artist__name {
+    top: 30px;
+    left: 30px;
+  }
+  .next {
+    right: 30px;
+  }
+  /* 90% width and center */
+  .latest__news,
+  .artists,
+  .album__reviews,
+  .blues__events,
+  .latest__photo__container,
+  aside,
+  .about__friends__latest {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* Latest news */
+
+  .pic__container {
+    display: inline-block;
+    padding: 10px 0 0 10px;
+  }
+
+  .name__comments__date {
+    width: 75%;
+  }
+
+  /* Artists + Latest photo*/
+  .artist__container,
+  .latest__photo__figure {
+    width: 200px;
+    margin: 20px auto 0 auto;
+  }
+  .artist__container .pic__container,
+  .latest__photo__figure .pic__container {
+    padding: 0;
+    max-width: 100%;
+  }
+  .artist__container .pic__icons__container i,
+  .latest__photo__figure i {
+    font-size: 1.5rem;
+  }
+
+  figcaption p,
+  .latest__photo__figure p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  /* Album reviews */
+
+  .articles {
+    display: flex;
+    justify-content: space-between;
+  }
+  .album__review__article {
+    width: 47%;
+  }
+
+  .album__review__article .pic__container {
+    width: 100%;
+    padding: 0;
+  }
+  .album__review__article img {
+    width: 100%;
+  }
+  .album__review__article h2 {
+    margin: 0;
+  }
+  .name__date {
+    font-size: 0.9rem;
+  }
+  /* Followers */
+  .followers__container {
+    align-items: start;
+    padding-left: 30px;
+    height: 400px;
+  }
+  .followers {
+    width: 50%;
+    text-align: start;
+  }
+
+  /* about__friends__latest */
+
+  .about__friends__latest {
+    margin-top: 50px;
+  }
+  .sticky__player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sticky__player p {
+    margin-bottom: 10px;
+  }
+  .refresh__play__pause {
+    margin-left: 20px;
+  }
+  .volume__control__container {
+    margin-right: 20px;
+  }
+
+  .sticky__player__visible {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    width: 1015px;
+    margin: 20px auto 0 auto;
+  }
+  main {
+    background-color: rgba(34, 34, 47, 0.95);
+    padding: 5px;
+  }
+
+  h2 {
+    text-align: start;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  /* Logo */
+  .logo__container {
+    justify-content: flex-start;
+  }
+  .logo {
+    margin-left: 10px;
+    width: 100px;
+  }
+  /* Navigation */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav__list__dir {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .nav__list__dir--current {
+    background-color: #fff;
+    color: #000;
+  }
+
+  form {
+    padding-bottom: 0;
+  }
+  .search__input {
+    padding: 10px 50px 10px 10px;
+    margin: 0;
+    border: none;
+  }
+  .btn {
+    padding: 10px;
+    border: none;
+    margin: 0;
+    color: white;
+  }
+  /* Slideshow */
+  .slideshow__section__container {
+    padding: 15px;
+  }
+
+  .pagination {
+    bottom: 30px;
+    right: 30px;
+  }
+
+  .artist__name {
+    top: 200px;
+    left: 100px;
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .next {
+    right: 15px;
+  }
+  /* main content */
+  .main__content {
+    display: flex;
+  }
+  .latest__news {
+    margin: 0;
+  }
+  /* Latest news */
+  .pic__container {
+    padding: 0;
+    margin-right: 10px;
+    clear: both;
+  }
+  .pic__container img {
+    width: 250px;
+  }
+
+  .picture__text {
+    display: flex;
+    font-size: 0.9rem;
+  }
+
+  /* Artist + latest photo*/
+  .artists,
+  .latest__photo__container {
+    margin: 0;
+  }
+  .artist__container,
+  .latest__photo__figure {
+    background-color: rgb(235, 227, 227);
+    margin-bottom: 10px;
+  }
+  .artists__container,
+  .latest__photos__container {
+    display: flex;
+    background-color: #fff;
+  }
+  .latest__photo__figure:hover,
+  .artist__container:hover {
+    color: rgb(38, 38, 156);
+    cursor: pointer;
+    border-bottom: 2px solid rgb(38, 38, 156);
+  }
+  .artist__container .pic__icons__container i,
+  .latest__photo__figure i {
+    font-size: 1rem;
+  }
+
+  /* Album reviews */
+  .album__reviews {
+    margin: 0;
+    text-align: center;
+  }
+
+  /* .about__friends__latest */
+  .about__friends__latest {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .about {
+    margin-left: 10px;
+    width: 50%;
+  }
+  .about * {
+    width: 300px;
+  }
+  .friends__latest__played {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+  }
+
+  /* followers */
+
+  .followers__container {
+    padding: 0;
+    align-items: center;
+  }
+
+  .followers__button {
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+  .followers {
+    width: 100%;
+  }
+  .tooltip img {
+    width: 40px;
+  }
+  /* Music player */
+  .sticky__player__visible {
+    background-color: black;
+    position: absolute;
+    right: 50px;
+    bottom: 54px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.5rem;
+  }
+  .sticky__player__visible i:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .sticky__player__visible--red:hover {
+    color: red;
+  }
 }
