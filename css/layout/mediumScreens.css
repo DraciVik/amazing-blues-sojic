@@ -1,0 +1,112 @@
+@media screen and (min-width: 800px) {
+  /* Grid layout */
+  body {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-template-rows: auto;
+    gap: 0 20px;
+    grid-template-areas:
+      "header header"
+      "slideshow slideshow"
+      "main aside"
+      "footer footer"
+      "player player";
+  }
+  header {
+    grid-area: header;
+  }
+  #slideshow {
+    grid-area: slideshow;
+    width: 700px;
+  }
+
+  main {
+    grid-area: main;
+    margin: 0;
+  }
+  aside {
+    grid-area: aside;
+  }
+  footer {
+    grid-area: footer;
+  }
+  #musicPlayer {
+    grid-area: player;
+    width: 100%;
+  }
+  /* Navigation */
+  #nav ul {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #nav ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .slidesContainer img {
+    height: 300px;
+  }
+  /* Latest news, albumReviews */
+  #latestNews article img,
+  #albumReviews article img {
+    max-width: 250px;
+    float: left;
+    margin-right: 10px;
+  }
+  /* Artists + Latest Photo */
+  #artists ul,
+  #latestPhoto ul {
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+  #artists li,
+  #latestPhoto li {
+    margin: 0 0 5px 0;
+  }
+  /* Footer */
+  footer {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 0 10px;
+    grid-template-areas:
+      "about otherStations friends latestPlayed"
+      "copyright copyright copyright copyright";
+  }
+  #about {
+    grid-area: about;
+    padding-left: 10px;
+  }
+  .otherStations {
+    grid-area: otherStations;
+  }
+  #friends {
+    grid-area: friends;
+  }
+  #latestPlayed {
+    grid-area: latestPlayed;
+  }
+  #copyright {
+    grid-area: copyright;
+    height: 100%;
+  }
+  /* Music player */
+  #musicPlayer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .visible {
+    display: none;
+  }
+  /* followers */
+  #followBtn {
+    padding: 10px 40px 10px 40px;
+  }
+}

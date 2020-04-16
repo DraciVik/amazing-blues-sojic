@@ -119,6 +119,13 @@ form input[type="submit"]:hover {
 #artists li,
 #latestPhoto li {
   background-color: var(--article-figure-bg);
+  border-bottom: 3px solid gray;
+}
+
+#artists li:hover,
+#latestPhoto li:hover {
+  background-color: var(--article-figure-bg);
+  border-bottom: 3px solid var(--a-hover);
 }
 
 #artists figcaption a,
@@ -181,8 +188,11 @@ footer {
   color: white;
 }
 
-footer a {
+footer #friends a {
   color: white;
+}
+footer #friends a:hover {
+  color: var(--a-hover);
 }
 #copyright {
   background-color: black;
