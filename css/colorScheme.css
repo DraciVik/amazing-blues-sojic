@@ -1,0 +1,190 @@
+/* Globals */
+:root {
+  --main-bg-color: rgb(59, 56, 56);
+  --header-btn-hover: #3350c7;
+  --header-footer: rgba(69, 70, 128, 0.719);
+  --nav-form-bg: #080808a8;
+  --article-figure-bg: #fff;
+  --a-hover: rgba(88, 88, 245, 0.836);
+}
+
+html {
+  background: var(--main-bg-color) url("../images/background.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: #fff;
+}
+
+/* Header */
+#logoBanner {
+  background-color: var(--header-footer);
+}
+header #nav,
+header form {
+  background-color: var(--nav-form-bg);
+}
+nav li.active {
+  background-color: rgb(119, 236, 231);
+}
+#nav li:hover:not(.active) {
+  background-color: var(--header-btn-hover);
+}
+
+#nav a {
+  color: white;
+}
+
+form input[type="submit"] {
+  background-color: var(--header-btn-hover);
+  color: white;
+}
+
+form input[type="submit"]:hover {
+  background-color: #000;
+}
+
+/* Slideshow */
+
+#slideshow {
+  background-color: white;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  color: white;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Artist name */
+.slidesContainer li h1,
+.slidesContainer li p {
+  color: #f2f2f2;
+  background-color: rgb(5, 5, 131);
+}
+
+/*number indicators */
+
+#pagination li {
+  background-color: #bbb;
+  transition: background-color 0.6s ease;
+}
+
+#pagination li:hover {
+  background-color: #717171;
+}
+
+/* latest news, Album Reviews */
+#latestNews article,
+#albumReviews article {
+  background-color: var(--article-figure-bg);
+}
+
+#latestNews h3 a,
+#albumReviews h3 a {
+  color: black;
+}
+#latestNews h3 a:hover,
+#albumReviews h3 a:hover {
+  color: var(--a-hover);
+}
+
+#latestNews .metaData a,
+#albumReviews .metaData a {
+  color: black;
+  text-decoration: underline;
+}
+
+#latestNews .metaData a:hover,
+#albumReviews .metaData a:hover {
+  color: var(--a-hover);
+}
+
+/* Artists, Latest Photo */
+#artists li,
+#latestPhoto li {
+  background-color: var(--article-figure-bg);
+}
+
+#artists figcaption a,
+#latestPhoto figcaption a {
+  color: black;
+}
+#artists figcaption a:hover,
+#latestPhoto figcaption a:hover {
+  color: var(--a-hover);
+}
+
+/* ASIDE */
+
+/* Listen now */
+
+#listenNow ul {
+  background-color: white;
+}
+
+/* Other stations */
+
+.otherStations ul li {
+  background-color: white;
+}
+
+/* Ads */
+
+#ads ul li {
+  background-color: white;
+}
+/* Followers */
+
+#followersContainer {
+  background-color: white;
+  color: rgba(129, 129, 129, 0.897);
+}
+
+#followersContainer header a {
+  color: var(--a-hover);
+}
+
+#followBtn {
+  background-color: #6586ab;
+  color: white;
+}
+#followBtn:hover {
+  background-color: #7599c2;
+}
+/* tooltip */
+
+.followers li span {
+  background-color: black;
+  color: #fff;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--header-footer);
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+#copyright {
+  background-color: black;
+  border-top: 2px solid blue;
+}

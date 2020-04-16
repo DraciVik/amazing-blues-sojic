@@ -7,14 +7,17 @@
       src="https://kit.fontawesome.com/959a4d2ea2.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/colorScheme.css" />
+    <link rel="stylesheet" href="css/layout/mobileScreens.css" />
+    <link rel="stylesheet" href="css/layout/mediumScreens.css" />
+    <link rel="stylesheet" href="css/layout/largeScreens.css" />
     <title>Amazing Blues » Internet Radio &raquo; Feed</title>
   </head>
   <body>
     <header>
-      <div class="banner">
-        <!-- Think of a class or id name -->
-        <img id="logo" src="images/logo.png" alt="logo" />
+      <div id="logoBanner">
+        <img class="logo" src="images/logo.png" alt="logo" />
       </div>
       <nav id="nav">
         <ul>
@@ -30,14 +33,13 @@
       <form>
         <input type="search" name="search" placeholder="Search here..." />
         <input type="submit" value="GO" />
-        <!--Try using variables for the blue --var(blue) and select it with #nav input[type="submit"]-->
       </form>
     </header>
     <!-- TO DO remove unecessary class names -->
     <section id="slideshow">
       <ul class="slidesContainer">
-        <li>
-          <p>All Day Blues</p>
+        <li class="active">
+          <h1>All Day Blues</h1>
           <!-- Make into h1? But there will be more h1s on the page... -->
           <img alt="artist" src="https://picsum.photos/300/200" />
         </li>
@@ -241,17 +243,14 @@
                 “Prick of the Litter“, in collaboration with Self-Made Men.
                 “Prick of the Litter” ...
               </p>
-              <div class="metaData">
-                <ul>
-                  <li><i class="fas fa-user"></i>Milena Staniskovska</li>
-                  <li>
-                    <time datetime="2017-02-04"
-                      ><i class="fas fa-comment-alt"></i>February 4th,
-                      2017</time
-                    >
-                  </li>
-                </ul>
-              </div>
+              <ul class="metaData">
+                <li><i class="fas fa-user"></i>Milena Staniskovska</li>
+                <li>
+                  <time datetime="2017-02-04"
+                    ><i class="fas fa-comment-alt"></i>February 4th, 2017</time
+                  >
+                </li>
+              </ul>
             </article>
           </li>
           <li>
@@ -268,22 +267,19 @@
                 thanks to the legacy he left behind. “Holding On” is the new gem
                 of Jeff’s “lost ...
               </p>
-              <div class="metaData">
-                <ul>
-                  <li><i class="fas fa-user"></i>Milena Staniskovska</li>
-                  <li>
-                    <time datetime="2017-01-11"
-                      ><i class="fas fa-comment-alt"></i>January 11th,
-                      2017</time
-                    >
-                  </li>
-                </ul>
-              </div>
+              <ul class="metaData">
+                <li><i class="fas fa-user"></i>Milena Staniskovska</li>
+                <li>
+                  <time datetime="2017-01-11"
+                    ><i class="fas fa-comment-alt"></i>January 11th, 2017</time
+                  >
+                </li>
+              </ul>
             </article>
           </li>
         </ul>
       </section>
-      <section class="blues__events">
+      <section id="bluesEvents">
         <h2>BLUES EVENTS</h2>
       </section>
       <section id="latestPhoto">
@@ -318,7 +314,7 @@
     </main>
     <aside>
       <h2>LISTEN NOW</h2>
-      <section class="listenNow">
+      <section id="listenNow">
         <ul>
           <li>
             <a href="#" target="_blank" rel="noreferrer noopener"
@@ -374,7 +370,7 @@
           <li></li>
         </ul>
       </section>
-      <section id="follow">
+      <section id="followersContainer">
         <header>
           <a href="#"><img src="images/logo.png" alt="logo" class="logo" /></a>
           <p><a href="#">Amazing Blues</a></p>
@@ -382,33 +378,33 @@
         <p id="followersCount">5 followers</p>
         <div class="followers">
           <ul>
-            <li>
+            <li class="tooltip">
               <a href="#" target="_blank" rel="noreferrer noopener"
                 ><img src="https://source.unsplash.com/random/50x50"
               /></a>
-              <span class="tooltip">Viktorya</span>
+              <span>Viktorya</span>
             </li>
-            <li>
+            <li class="tooltip">
               <a href="#" target="_blank" rel="noreferrer noopener"
                 ><img src="https://source.unsplash.com/random/50x50"
               /></a>
-              <span class="tooltip">Dalibor</span>
+              <span>Dalibor</span>
             </li>
-            <li>
+            <li class="tooltip">
               <a href="#" target="_blank" rel="noreferrer noopener"
                 ><img src="https://source.unsplash.com/random/50x50"
               /></a>
-              <span class="tooltip">Anastasia</span>
+              <span>Anastasia</span>
             </li>
-            <li>
+            <li class="tooltip">
               <a href="#" target="_blank" rel="noreferrer noopener"
                 ><img src="https://source.unsplash.com/random/50x50"
               /></a>
-              <span class="tooltip">Tamas</span>
+              <span>Tamas</span>
             </li>
           </ul>
         </div>
-        <button class="followers" type="button">
+        <button id="followBtn" type="button">
           <i class="fab fa-vk"></i>Follow on VK
         </button>
       </section>

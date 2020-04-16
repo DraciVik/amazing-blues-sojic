@@ -1,0 +1,397 @@
+/* Globals */
+
+html * {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h3 {
+  margin: 10px 0 10px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#logoBanner {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logoBanner .logo {
+  display: block;
+  width: 150px;
+}
+
+#nav,
+header form {
+  text-align: center;
+}
+
+#nav li {
+  line-height: 2.5rem;
+}
+header form {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+form input[type="search"] {
+  padding: 10px 150px 10px 10px;
+  margin: 0;
+  border: none;
+}
+form input[type="submit"] {
+  padding: 10px;
+  border: none;
+  margin: 0;
+}
+
+/* Slideshow */
+.slidesContainer li:not(.active) {
+  display: none;
+}
+#slideshow {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+}
+.slidesContainer img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.slidesContainer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Artist name */
+.slidesContainer li h1,
+.slidesContainer li p {
+  margin-top: 0;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  text-transform: uppercase;
+  background-color: rgb(5, 5, 131);
+}
+
+/*number indicators */
+#pagination {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
+#pagination li {
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+#pagination a {
+  color: white;
+}
+
+#pagination li:hover {
+  background-color: #717171;
+}
+
+/* MAIN  */
+
+main {
+  margin: 20px 5px 20px 5px;
+}
+
+/* Latest news, Album reviews */
+#latestNews article,
+#albumReviews article {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#latestNews img,
+#albumReviews img {
+  display: block;
+  margin: 0 auto;
+}
+
+#latestNews .metaData,
+#albumReviews .metaData {
+  margin-top: 10px;
+  display: flex;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#albumReviews .metaData {
+  flex-wrap: nowrap;
+}
+
+#latestNews .metaData i,
+#albumReviews .metaData i {
+  margin-right: 5px;
+}
+/* Artists, LatestPhoto */
+#artists li,
+#latestPhoto li {
+  margin: 0 auto 10px auto;
+  width: 200px;
+}
+
+#artists figure img,
+#latestPhoto figure img {
+  width: 200px;
+}
+
+/* ASIDE */
+aside section {
+  margin-bottom: 20px;
+}
+
+/* Listen now */
+#listenNow {
+  height: 30px;
+}
+#listenNow ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Other stations */
+.otherStations {
+  width: 310px;
+  margin: 0 auto;
+}
+.otherStations ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.otherStations ul li {
+  width: 145px;
+  height: 145px;
+  margin-bottom: 20px;
+}
+/* Ads */
+#ads {
+  display: flex;
+  justify-content: center;
+}
+#ads ul {
+  text-align: center;
+}
+#ads ul li {
+  width: 338px;
+  height: 260px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/* Followers */
+
+#followersContainer {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  position: relative;
+}
+#followersContainer header {
+  width: 100%;
+  display: flex;
+  padding: 20px 0 20px 20px;
+  border-bottom: 1px solid rgba(240, 228, 228, 0.733);
+}
+
+#followersContainer header .logo {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#followersCount {
+  margin-left: 20px;
+  align-self: start;
+}
+.followers ul {
+  display: flex;
+}
+
+.followers li {
+  margin-top: 2rem;
+  width: 100%;
+}
+.followers li img {
+  border-radius: 50%;
+}
+#followBtn {
+  max-width: 90%;
+  padding: 10px 100px;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+}
+
+#followBtn i {
+  margin-right: 10px;
+}
+/* tooltip */
+.followers li {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.followers li span {
+  visibility: hidden;
+  width: 120px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position tooltip li */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.followers li:hover span {
+  visibility: visible;
+}
+
+/* footer */
+footer section:not(#copyright) {
+  margin-bottom: 20px;
+}
+
+/* Music player */
+
+#musicPlayer {
+  color: white;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  text-align: center;
+  align-items: baseline;
+}
+#musicPlayer p {
+  margin-top: 10px;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.fa-stop {
+  font-size: 1.5rem;
+  padding: 7px;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: -10px;
+  margin-right: 20px;
+}
+.fa-sync {
+  font-size: 1.5rem;
+  padding: 7px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.fa-play {
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+.fa-volume-up {
+  margin-right: 5px;
+}
+
+#volumeControl {
+  display: flex;
+  align-content: baseline;
+  justify-content: center;
+}
+#volumeControl input[type="range"] {
+  margin: 0 0 5px 0;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4a3bd1;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4a3bd1;
+  cursor: pointer;
+}
+
+.visible {
+  visibility: hidden;
+}
