@@ -1,0 +1,75 @@
+@media screen and (min-width: 1015px) {
+  /* Globals */
+  body {
+    width: 1015px;
+    margin: 0 auto;
+    grid-template-columns: 65% 31%;
+  }
+  #slideshow,
+  main,
+  aside {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  /* Header */
+  header {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "logo logo"
+      "nav search";
+  }
+  #logoBanner {
+    grid-area: logo;
+    justify-content: flex-start;
+    height: 130px;
+  }
+  #logoBanner .logo {
+    width: 100px;
+    margin-left: 10px;
+  }
+  #nav {
+    grid-area: nav;
+  }
+  header form {
+    grid-area: search;
+  }
+  header form input[type="search"] {
+    padding: 5px;
+  }
+  header form input[type="submit"] {
+    padding: 5px;
+  }
+  #slideshow {
+    width: 900px;
+  }
+
+  /* Artists + latest photo */
+  #artists ul,
+  #latestPhoto ul {
+    justify-content: center;
+  }
+  #artists ul li,
+  #latestPhoto ul li {
+    padding: 5px;
+  }
+  /* Album reviews */
+  #albumReviews ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #albumReviews ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #albumReviews article img {
+    max-width: 250px;
+    float: none;
+    margin: 0 auto;
+  }
+  .metaData {
+    font-size: 0.8rem;
+  }
+}

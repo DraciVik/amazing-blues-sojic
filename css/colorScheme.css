@@ -2,10 +2,15 @@
 :root {
   --main-bg-color: rgb(59, 56, 56);
   --header-btn-hover: #3350c7;
-  --header-footer: rgba(69, 70, 128, 0.719);
+  --bg-transparent: rgba(69, 70, 128, 0.719);
   --nav-form-bg: #080808a8;
   --article-figure-bg: #fff;
   --a-hover: rgba(88, 88, 245, 0.836);
+  --a-on-dark-bg: #fff;
+  --a-on-light-bg: #000;
+  --h2-color: #fff;
+  --nav-active-page: rgb(119, 236, 231);
+  --section-article-figure-bg-color: #fff;
 }
 
 html {
@@ -22,26 +27,26 @@ a {
 }
 
 h2 {
-  color: #fff;
+  color: var(--h2-color);
 }
 
 /* Header */
 #logoBanner {
-  background-color: var(--header-footer);
+  background-color: var(--bg-transparent);
 }
 header #nav,
 header form {
   background-color: var(--nav-form-bg);
 }
 nav li.active {
-  background-color: rgb(119, 236, 231);
+  background-color: var(--nav-active-page);
 }
 #nav li:hover:not(.active) {
   background-color: var(--header-btn-hover);
 }
 
 #nav a {
-  color: white;
+  color: var(--a-on-dark-bg);
 }
 
 form input[type="submit"] {
@@ -56,7 +61,7 @@ form input[type="submit"]:hover {
 /* Slideshow */
 
 #slideshow {
-  background-color: white;
+  background-color: var(--section-article-figure-bg-color);
 }
 
 /* Next & previous buttons */
@@ -90,14 +95,14 @@ form input[type="submit"]:hover {
 }
 
 /* latest news, Album Reviews */
-#latestNews article,
-#albumReviews article {
+#latestNews li,
+#albumReviews li {
   background-color: var(--article-figure-bg);
 }
 
 #latestNews h3 a,
 #albumReviews h3 a {
-  color: black;
+  color: var(--a-on-light-bg);
 }
 #latestNews h3 a:hover,
 #albumReviews h3 a:hover {
@@ -106,7 +111,7 @@ form input[type="submit"]:hover {
 
 #latestNews .metaData a,
 #albumReviews .metaData a {
-  color: black;
+  color: var(--a-on-light-bg);
   text-decoration: underline;
 }
 
@@ -130,7 +135,7 @@ form input[type="submit"]:hover {
 
 #artists figcaption a,
 #latestPhoto figcaption a {
-  color: black;
+  color: var(--a-on-light-bg);
 }
 #artists figcaption a:hover,
 #latestPhoto figcaption a:hover {
@@ -142,24 +147,24 @@ form input[type="submit"]:hover {
 /* Listen now */
 
 #listenNow ul {
-  background-color: white;
+  background-color: var(--section-article-figure-bg-color);
 }
 
 /* Other stations */
 
 .otherStations ul li {
-  background-color: white;
+  background-color: var(--section-article-figure-bg-color);
 }
 
 /* Ads */
 
 #ads ul li {
-  background-color: white;
+  background-color: var(--section-article-figure-bg-color);
 }
 /* Followers */
 
 #followersContainer {
-  background-color: white;
+  background-color: var(--section-article-figure-bg-color);
   color: rgba(129, 129, 129, 0.897);
 }
 
@@ -184,12 +189,12 @@ form input[type="submit"]:hover {
 /* footer */
 
 footer {
-  background-color: var(--header-footer);
+  background-color: var(--bg-transparent);
   color: white;
 }
 
 footer #friends a {
-  color: white;
+  color: var(--a-on-dark-bg);
 }
 footer #friends a:hover {
   color: var(--a-hover);
@@ -197,4 +202,16 @@ footer #friends a:hover {
 #copyright {
   background-color: black;
   border-top: 2px solid blue;
+}
+
+@media screen and (min-width: 1015px) {
+  #slideshow,
+  main,
+  aside {
+    background-color: var(--bg-transparent);
+  }
+  #artists figure,
+  #latestPhoto figure {
+    background-color: var(--section-article-figure-bg-color);
+  }
 }

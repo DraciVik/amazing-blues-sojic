@@ -192,6 +192,7 @@ aside section {
 }
 #listenNow ul {
   display: flex;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
 }
